@@ -6,6 +6,10 @@ public class Task6 {
 
         int x = 3;
 
+        x += x++;
+
+        System.out.println(x);
+
         x++;
 
         System.out.println(x);
@@ -13,6 +17,8 @@ public class Task6 {
         x--;
 
         System.out.println(x);
+
+
 
 
 
