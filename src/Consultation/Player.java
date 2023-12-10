@@ -1,4 +1,4 @@
-package Cons02;
+package Consultation;
 
 public class Player {
 
