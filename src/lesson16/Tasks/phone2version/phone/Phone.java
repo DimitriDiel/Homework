@@ -1,11 +1,11 @@
 package lesson16.Tasks.phone2version.phone;
 
+import java.util.Arrays;
+
 public class Phone {
     private int imei;
 
-    private SimCard simCard;
-
-    private SimCard simCardTwo;
+    private SimCard[] simSlots = new SimCard[2];
 
     private String model;
 
@@ -23,13 +23,6 @@ public class Phone {
         return imei;
     }
 
-    public SimCard getSimCard() {
-        return simCard;
-    }
-
-    public void setSimCard(SimCard simCard) {
-        this.simCard = simCard;
-    }
 
     public Case getPhoneCase() {
         return PhoneCase;
@@ -43,20 +36,19 @@ public class Phone {
         return model;
     }
 
-    public SimCard getSimCardTwo() {
-        return simCardTwo;
+    public SimCard getSimSlots(int slotNumber) {
+        return simSlots[slotNumber];
     }
 
-    public void setSimCardTwo(SimCard simCardTwo) {
-        this.simCardTwo = simCardTwo;
+    public void setSimSlots(int slotNumber, SimCard simCard) {
+        this.simSlots[slotNumber] = simCard;
     }
 
     @Override
     public String toString() {
         return "Phone{" +
                 "imei=" + imei +
-                ", simCard=" + simCard +
-                ", simCard2=" + simCardTwo +
+                ", simCard=" + Arrays.toString(simSlots) +
                 ", model='" + model + '\'' +
                 ", PhoneCase=" + PhoneCase +
                 '}';
