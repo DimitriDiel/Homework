@@ -21,8 +21,8 @@ public class PhoneService {
     }
 
     public SimCard removeSimCard(Phone phone, SimCard simCard,int slotSimCard) {
-        SimCard removedSimCard = phone.getSimSlots(0);
-        phone.setSimSlots(0,simCard);
+        SimCard removedSimCard = phone.getSimSlots(slotSimCard);
+        phone.setSimSlots(slotSimCard,simCard);
         return removedSimCard;
     }
 
