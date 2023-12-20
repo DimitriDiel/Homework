@@ -1,7 +1,5 @@
 package lesson08.task1;
 
-import java.util.Arrays;
-import java.util.Scanner;
 
 public class Task1 {
 
