@@ -19,4 +19,12 @@ public class Rectangle extends Shape{
     double calculatorPerimeter() {
         return 2 * (sideA + sideB);
     }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "sideA=" + sideA +
+                ", sideB=" + sideB +
+                '}';
+    }
 }

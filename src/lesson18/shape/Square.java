@@ -18,4 +18,11 @@ public class Square extends Shape{
     double calculatorPerimeter() {
         return 4 * sideA;
     }
+
+    @Override
+    public String toString() {
+        return "Square{" +
+                "sideA=" + sideA +
+                '}';
+    }
 }

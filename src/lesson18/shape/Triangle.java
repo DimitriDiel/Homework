@@ -23,4 +23,13 @@ public class Triangle extends Shape{
     double calculatorPerimeter() {
         return sideA + sideB + sideC;
     }
+
+    @Override
+    public String toString() {
+        return "Triangle{" +
+                "sideA=" + sideA +
+                ", sideB=" + sideB +
+                ", sideC=" + sideC +
+                '}';
+    }
 }
