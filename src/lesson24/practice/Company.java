@@ -1,6 +1,5 @@
-package lesson24;
+package lesson24.practice;
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 
