@@ -1,8 +1,8 @@
-package Consultation.Cons4.Libruary1.service;
+package Consultation.cons4.Libruary1.service;
 
-import Consultation.Cons4.Libruary1.entiry.Book;
-import Consultation.Cons4.Libruary1.entiry.Bookcase;
-import Consultation.Cons4.Libruary1.entiry.Bookshelf;
+import Consultation.cons4.Libruary1.entiry.Book;
+import Consultation.cons4.Libruary1.entiry.Bookcase;
+import Consultation.cons4.Libruary1.entiry.Bookshelf;
 
 public class BookCaseService {
 

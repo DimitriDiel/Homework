@@ -1,7 +1,7 @@
-package Consultation.Cons4.Libruary1.service;
+package Consultation.cons4.Libruary1.service;
 
-import Consultation.Cons4.Libruary1.entiry.Book;
-import Consultation.Cons4.Libruary1.entiry.Books;
+import Consultation.cons4.Libruary1.entiry.Book;
+import Consultation.cons4.Libruary1.entiry.Books;
 import Consultation.lotto.service.UserInput;
 
 public class BookService {

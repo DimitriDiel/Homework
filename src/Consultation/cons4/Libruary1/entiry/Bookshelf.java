@@ -1,4 +1,4 @@
-package Consultation.Cons4.Libruary1.entiry;
+package Consultation.cons4.Libruary1.entiry;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package lesson16.Tasks.phone2version.phone;
+package lesson16.tasks.phone2version.phone;
 
 import java.util.Arrays;
 

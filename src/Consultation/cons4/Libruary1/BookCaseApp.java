@@ -1,9 +1,9 @@
-package Consultation.Cons4.Libruary1;
+package Consultation.cons4.Libruary1;
 
-import Consultation.Cons4.Libruary1.entiry.Book;
-import Consultation.Cons4.Libruary1.entiry.Bookcase;
-import Consultation.Cons4.Libruary1.service.BookCaseService;
-import Consultation.Cons4.Libruary1.service.BookService;
+import Consultation.cons4.Libruary1.entiry.Book;
+import Consultation.cons4.Libruary1.entiry.Bookcase;
+import Consultation.cons4.Libruary1.service.BookCaseService;
+import Consultation.cons4.Libruary1.service.BookService;
 
 public class BookCaseApp {
     public static void main(String[] args) {

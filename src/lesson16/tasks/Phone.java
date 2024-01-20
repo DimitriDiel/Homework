@@ -1,4 +1,4 @@
-package lesson16.Tasks;
+package lesson16.tasks;
 
 public class Phone {
 
