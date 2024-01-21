@@ -1,4 +1,4 @@
-package lesson27.library.util;
+package lesson27.library.myLibrary.util;
 
 import java.util.Scanner;
 

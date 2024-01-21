@@ -1,4 +1,4 @@
-package lesson27.library.entity;
+package lesson27.library.myLibrary.entity;
 
 public class Genre {
 

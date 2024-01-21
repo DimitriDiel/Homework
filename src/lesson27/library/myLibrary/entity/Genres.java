@@ -1,4 +1,4 @@
-package lesson27.library.entity;
+package lesson27.library.myLibrary.entity;
 
 import java.util.HashMap;
 
