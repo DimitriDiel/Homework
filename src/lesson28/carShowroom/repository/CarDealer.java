@@ -1,4 +1,5 @@
 package lesson28.carShowroom.repository;
+import lesson28.carShowroom.dto.Rating;
 import lesson28.carShowroom.entity.Car;
 import java.util.HashMap;
 import java.util.Map;
@@ -40,6 +41,31 @@ public class CarDealer {
             }
         }
         return carsByBrand;
+    }
+    public Map<String, Car> findCarByModel(String model){
+        Map<String,Car> carsByModel = new HashMap<>();
+        for (Map.Entry<String,Car> entry : cars.entrySet()){
+            if(entry.getValue().getModel().equals(model)){
+                carsByModel.put(entry.getKey(), entry.getValue());
+            }
+        }
+        return carsByModel;
+    }
+    public Map<String, Car> findCarByYearOfIssue(int yearOfIssue){
+        Map<String,Car> carsByYearOfIssue = new HashMap<>();
+        for (Map.Entry<String,Car> entry : cars.entrySet()){
+            if(entry.getValue().getYearOfIssue() == yearOfIssue){
+                carsByYearOfIssue.put(entry.getKey(), entry.getValue());
+            }
+        }
+        return carsByYearOfIssue;
+    }
+    public void editPrice(Car car, Double newPrice){
+
+
+    }
+    public void editRating(Car car, Rating newRating){
+
     }
 
 }

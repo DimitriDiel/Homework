@@ -30,6 +30,7 @@
         - sortingByPrice
         - sortingByYearOfIssue
         - UserInput
+        - response...
     5. Добавить UserInterface
         - menu:
             - ratingCarByUser
