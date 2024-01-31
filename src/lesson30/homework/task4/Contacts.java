@@ -1,4 +1,4 @@
-package lesson30.task4;
+package lesson30.homework.task4;
 
 import java.util.HashMap;
 import java.util.Map;

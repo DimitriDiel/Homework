@@ -1,4 +1,4 @@
-package lesson30.task3;
+package lesson30.homework.task3;
 
 import java.util.ArrayList;
 import java.util.List;

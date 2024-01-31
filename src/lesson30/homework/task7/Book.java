@@ -1,4 +1,4 @@
-package lesson30.task7;
+package lesson30.homework.task7;
 
 import java.util.Objects;
 
