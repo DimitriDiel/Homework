@@ -5,6 +5,8 @@ import lesson28.carShowroom.entity.Car;
 import lesson28.carShowroom.service.CarServices;
 import lesson28.carShowroom.service.util.UserInput;
 
+import java.util.Map;
+
 
 public class FindCarByBrandMenu implements MenuCommand {
 
@@ -17,10 +19,9 @@ public class FindCarByBrandMenu implements MenuCommand {
     @Override
     public void executeCommand() {
 
-        UserInput userInput = new UserInput();
-        String nameSearch = userInput.uiText("Please enter car brand: ");
+        String brandSearch = UserInput.getText("Please enter car brand: ");
 
-        Response<Car> response = service.findByName(nameSearch);
+        Response<Map<String, Car>> response = service.findByBrand(brandSearch);
         if (response.getMessage().equals("Ok")) {
             System.out.println(response.getData());
         } else {

@@ -15,7 +15,6 @@ public class DeleteCarMenu implements MenuCommand {
     @Override
     public void executeCommand() {
 
-        UserInput userInput = new UserInput();
         String vinSearch = UserInput.getText("Please enter car VIN: ");
 
 

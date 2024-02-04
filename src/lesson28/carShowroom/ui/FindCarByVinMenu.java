@@ -18,10 +18,10 @@ public class FindCarByVinMenu implements MenuCommand {
     @Override
     public void executeCommand() {
 
-        UserInput userInput = new UserInput();
-        int idSearch = userInput.uiInt("Please enter client id: ");
 
-       Response<Car> response = service.findById(idSearch);
+        String vinSearch = UserInput.getText("Please enter client id: ");
+
+       Response<Car> response = service.findByVin(vinSearch);
         if (response.getMessage().equals("Ok")) {
             System.out.println(response.getData());
         } else {
