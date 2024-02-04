@@ -24,6 +24,14 @@ public class Car {
         return brand;
     }
 
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setRating(Rating rating) {
+        this.rating = rating;
+    }
+
     public String getModel() {
         return model;
     }

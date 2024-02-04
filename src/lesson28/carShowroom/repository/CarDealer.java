@@ -60,11 +60,14 @@ public class CarDealer {
         }
         return carsByYearOfIssue;
     }
-    public void editPrice(Car car, Double newPrice){
-
+    public void editPrice(String vinNumber, Double newPrice){
+        Car carForEditPrice = findCarByVinNumber(vinNumber);
+        carForEditPrice.setPrice(newPrice);
 
     }
-    public void editRating(Car car, Rating newRating){
+    public void editRating(String vinNumber, Rating newRating){
+        Car carForEditPrice = findCarByVinNumber(vinNumber);
+        carForEditPrice.setRating(newRating);
 
     }
 
