@@ -20,4 +20,5 @@ public class UserInput {
         return scanner.nextDouble();
     }
 
+
 }

@@ -1,7 +1,5 @@
 package lesson28.carShowroom.entity;
 
-import lesson28.carShowroom.dto.Rating;
-
 import java.util.Objects;
 
 public class Car {
@@ -10,9 +8,9 @@ public class Car {
     private String model;
     private int yearOfIssue;
     private double price;
-    private Rating rating;
+    private int rating;
 
-    public Car(String brand, String model, int yearOfIssue, double price, Rating rating) {
+    public Car(String brand, String model, int yearOfIssue, double price, int rating) {
         this.brand = brand;
         this.model = model;
         this.yearOfIssue = yearOfIssue;
@@ -28,9 +26,6 @@ public class Car {
         this.price = price;
     }
 
-    public void setRating(Rating rating) {
-        this.rating = rating;
-    }
 
     public String getModel() {
         return model;
@@ -44,8 +39,12 @@ public class Car {
         return price;
     }
 
-    public Rating getRating() {
+    public int getRating() {
         return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
     }
 
     @Override

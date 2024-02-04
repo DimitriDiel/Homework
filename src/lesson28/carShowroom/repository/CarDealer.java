@@ -1,8 +1,8 @@
 package lesson28.carShowroom.repository;
-import lesson28.carShowroom.dto.Rating;
 import lesson28.carShowroom.entity.Car;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class CarDealer {
 
@@ -14,20 +14,22 @@ public class CarDealer {
     public Map<String, Car> getCars() {
         return cars;
     }
-    public void addCar(String vinNumber, Car newCar) {
-        cars.put(vinNumber, new Car(newCar.getBrand(), newCar.getModel(), newCar.getYearOfIssue(), newCar.getPrice(), newCar.getRating()));
+    public Car addCar(String vinNumber, Car newCar) {
+        Car carForAdd = new Car(newCar.getBrand(), newCar.getModel(), newCar.getYearOfIssue(), newCar.getPrice(), newCar.getRating());
+        cars.put(vinNumber, carForAdd);
+        return carForAdd;
     }
     public Map<String, Car> findAll() {
         return cars;
     }
-    public Car findCarByVinNumber(String vinNumber) {
+    public Optional<Car> findCarByVinNumber(String vinNumber) {
         if (cars.containsKey(vinNumber)) {
-            return cars.get(vinNumber);
+            return Optional.ofNullable(cars.get(vinNumber));
         }
-        return null;
+        return Optional.empty();
     }
     public boolean deleteByVinNumber(String vinNumber) {
-        if(findCarByVinNumber(vinNumber) != null){
+        if(findCarByVinNumber(vinNumber).isPresent()){
             cars.remove(vinNumber);
             return true;
         }
@@ -60,14 +62,24 @@ public class CarDealer {
         }
         return carsByYearOfIssue;
     }
-    public void editPrice(String vinNumber, Double newPrice){
-        Car carForEditPrice = findCarByVinNumber(vinNumber);
-        carForEditPrice.setPrice(newPrice);
+    public boolean editPrice(String vinNumber, Double newPrice){
+        Optional<Car> carFromDatabaseOpt = findCarByVinNumber(vinNumber);
+        if (carFromDatabaseOpt.isPresent()) {
+            Car carUpdate  = carFromDatabaseOpt.get();
+            carUpdate.setPrice(newPrice);
+            return true;
+        }
+        return false;
 
     }
-    public void editRating(String vinNumber, Rating newRating){
-        Car carForEditPrice = findCarByVinNumber(vinNumber);
-        carForEditPrice.setRating(newRating);
+    public boolean editRating(String vinNumber, int newRating){
+        Optional<Car> carFromDatabaseOpt = findCarByVinNumber(vinNumber);
+        if (carFromDatabaseOpt.isPresent()) {
+            Car carUpdate  = carFromDatabaseOpt.get();
+            carUpdate.setRating(newRating);
+            return true;
+        }
+        return false;
 
     }
 

@@ -15,11 +15,11 @@ public class DeleteCarMenu implements MenuCommand {
     @Override
     public void executeCommand() {
 
-        service.util.UserInput userInput = new UserInput();
-        int idSearch = userInput.uiInt("Please enter car VIN: ");
+        UserInput userInput = new UserInput();
+        String vinSearch = UserInput.getText("Please enter car VIN: ");
 
 
-        Response< Boolean> response = service.delete(idSearch);
+        Response< Boolean> response = service.delete(vinSearch);
         if (response.getMessage().equals("Ok")) {
             System.out.println(response.getData());
         } else {
