@@ -1,6 +1,5 @@
 package lesson28.carShowroom.ui;
 
-
 import lesson28.carShowroom.dto.Response;
 import lesson28.carShowroom.entity.Car;
 import lesson28.carShowroom.service.CarServices;
@@ -18,9 +17,9 @@ public class AddCarMenu implements MenuCommand {
     @Override
     public void executeCommand() {
 
-        Car newCar = service.createCar();
-
         String vin = UserInput.getText("Please enter car VIN: ");
+
+        Car newCar = service.createCar();
 
 
         Response<Car> response = service.add(vin,newCar);
