@@ -8,7 +8,7 @@ public class CarDealer {
 
     private Map<String, Car> cars;
 
-    public CarDealer(Map<String, Car> cars) {
+    public CarDealer() {
         this.cars = new HashMap<>();
     }
     public Map<String, Car> getCars() {
