@@ -22,18 +22,34 @@ public class Task3 {
         List<User> users = new ArrayList<>();
         String line;
         while ((line = bufferedReader.readLine()) != null) {
-            line = bufferedReader.readLine();
-            String userName = line.split(";")[0];
-            int identifier = Integer.parseInt(line.split(";")[1]);
-            String firstName= line.split(";")[2];
-            String lastName = line.split(";")[3];
+            try {
+                String userName = line.split(";")[0];
+                int identifier = Integer.parseInt(line.split(";")[1]);
+                String firstName = line.split(";")[2];
+                String lastName = line.split(";")[3];
 
-            users.add(new User(userName,identifier,firstName,lastName));
+                users.add(new User(userName, identifier, firstName, lastName));
+            } catch (Exception e){
+                System.out.println(e.getMessage());
 
+            }
         }
         reader.close();
 
         System.out.println(users);
+
+        //суммирование
+        String firstNameLastName = users.get(0).getFirstName() + " " +users.get(0).getLastName();
+
+        System.out.println(firstNameLastName);
+
+        // поиск
+
+        List<User> result = users.stream()
+                .filter(User -> User.getIdentifier() == 9346)
+                .toList();
+
+        System.out.println(result);
 
 
 
