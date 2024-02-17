@@ -21,7 +21,6 @@ public class AddCarMenu implements MenuCommand {
 
         Car newCar = service.createCar();
 
-
         Response<Car> response = service.add(vin,newCar);
         if (response.getMessage().equals("Ok")) {
             System.out.println(response.getData());
