@@ -86,5 +86,20 @@ public class CarServices {
             return new Response<>(findAllList, "Ok");
         }
     }
+    public Response<Boolean> editeRating(String vin, int rating){
+        boolean updateResult = database.editRating(vin, rating);
+        if (updateResult) {
+            return new Response<>(true, "Ok");
+        } else {
+            return new Response<>(false, "Update fail");
+        }
+    };
+    public Response<Map<String,Car>> findByYearOfIssue(int yearOfIssue){
+        Map<String, Car> carByYearOfIssue = database.findCarByYearOfIssue(yearOfIssue);
+        if (!carByYearOfIssue.isEmpty()) {
+            return new Response<>(carByYearOfIssue,"Ok");
+        } else {
+            return new Response<>(null, "Car not found");
+        }};
 
 }

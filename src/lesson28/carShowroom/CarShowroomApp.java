@@ -16,7 +16,10 @@ public class CarShowroomApp {
         FindAllCarMenu findAllClientMenu = new FindAllCarMenu(service);
         FindCarByVinMenu findByIdClientMenu = new FindCarByVinMenu(service);
         FindCarByBrandMenu findClientByNameMenu = new FindCarByBrandMenu(service);
+        FindCarByYearMenu findCarByYearMenu = new FindCarByYearMenu(service);
         DeleteCarMenu deleteClientMenu = new DeleteCarMenu(service);
+        EditPriceMenu editPriceMenu = new EditPriceMenu(service);
+        EditRatingMenu editRatingMenu = new EditRatingMenu(service);
         ExitMenu exitMenu = new ExitMenu();
 
         List<MenuCommand> menuCommands = new ArrayList<>();
@@ -24,7 +27,10 @@ public class CarShowroomApp {
         menuCommands.add(findAllClientMenu);
         menuCommands.add(findByIdClientMenu);
         menuCommands.add(findClientByNameMenu);
+        menuCommands.add(findCarByYearMenu);
         menuCommands.add(deleteClientMenu);
+        menuCommands.add(editPriceMenu);
+        menuCommands.add(editRatingMenu);
         menuCommands.add(exitMenu);
 
         UserMenu userMenu = new UserMenu(menuCommands);
