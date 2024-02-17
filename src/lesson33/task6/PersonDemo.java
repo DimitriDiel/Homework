@@ -25,13 +25,13 @@ public class PersonDemo {
         persons.add(new Person("Jeri",33, Arrays.asList("Java","HTML","SQL")));
 
 
-        List<Person> filteredPersons = persons.stream()
-                .filter(Person -> Person.getAge() >= 25)
-                .sorted(Comparator.comparing(Person :: getAge))
-                .filter(Person -> Person.getSkills().stream())
-                .toList();
+//        List<Person> filteredPersons = persons.stream()
+//                .filter(Person -> Person.getAge() >= 25)
+//                .sorted(Comparator.comparing(Person :: getAge))
+//                .filter(Person -> Person.getSkills().stream())
+//                .toList();
 
-        System.out.println(filteredPersons);
+ //       System.out.println(filteredPersons);
 
 
     }

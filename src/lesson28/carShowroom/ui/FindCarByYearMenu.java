@@ -31,7 +31,7 @@ public class FindCarByYearMenu implements MenuCommand {
 
     @Override
     public String getMenuName() {
-        return "Find car by brand";
+        return "Find car by yearOfIssue";
     }
 
     @Override

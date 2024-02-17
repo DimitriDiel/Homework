@@ -31,7 +31,7 @@ public class EditRatingMenu implements MenuCommand {
 
     @Override
     public String getMenuName() {
-        return "Edit price";
+        return "Edit rating";
     }
 
     @Override
