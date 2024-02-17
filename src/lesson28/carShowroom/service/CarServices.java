@@ -5,8 +5,7 @@ import lesson28.carShowroom.entity.Car;
 import lesson28.carShowroom.repository.CarDealer;
 import lesson28.carShowroom.service.util.UserInput;
 
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Supplier;
 
 public class CarServices {
@@ -51,6 +50,13 @@ public class CarServices {
         Map<String, Car> carByBrand = database.findCarByBrand(brand);
         if (!carByBrand.isEmpty()) {
             return new Response<>(carByBrand,"Ok");
+        } else {
+            return new Response<>(null, "Car not found");
+        }};
+    public Response<Map<String,Car>> findByModel(String model){
+        Map<String, Car> carByModel = database.findCarByModel(model);
+        if (!carByModel.isEmpty()) {
+            return new Response<>(carByModel,"Ok");
         } else {
             return new Response<>(null, "Car not found");
         }};
@@ -101,5 +107,21 @@ public class CarServices {
         } else {
             return new Response<>(null, "Car not found");
         }};
+    public LinkedHashMap<String,Car> sortingByRating(){
+        List<Map.Entry<String, Car>> sortedList = new ArrayList<>(database.getCars().entrySet());
+        sortedList.sort(new Comparator<Map.Entry<String, Car>>() {
+            @Override
+            public int compare(Map.Entry<String, Car> o1, Map.Entry<String, Car> o2) {
+                return o1.getValue().getRating() - o2.getValue().getRating();
+            }
+        });
+        LinkedHashMap<String,Car> sortedCars = new LinkedHashMap<>();
+        for (Map.Entry<String, Car> entry : sortedList) {
+            sortedCars.put(entry.getKey(), entry.getValue());
+        }
+        return sortedCars;
+
+
+    }
 
 }
