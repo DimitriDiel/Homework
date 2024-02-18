@@ -17,11 +17,8 @@ public class AddCarMenu implements MenuCommand {
     @Override
     public void executeCommand() {
 
-        String vin = UserInput.getText("Please enter car VIN: ");
 
-        Car newCar = service.createCar();
-
-        Response<Car> response = service.add(vin,newCar);
+        Response<Car> response = service.add();
         if (response.getMessage().equals("Ok")) {
             System.out.println(response.getData());
        } else {

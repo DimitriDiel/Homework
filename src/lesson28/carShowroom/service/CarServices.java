@@ -16,23 +16,17 @@ public class CarServices {
         this.database = database;
     }
 
-    public Supplier<Car> createCarSupplier() {
-        return () -> {
-            String carBrand = UserInput.getText("Введите марку авто");
-            String carModel = UserInput.getText("Введите модель авто");
-            int yearOfIssue = UserInput.getInt("Введите год авто");
-            double price = UserInput.getDouble("Введите цену авто");
-            int rating = UserInput.getInt("Введите рейтинг от 1 до 5");
-            return new Car(carBrand,carModel,yearOfIssue,price,rating);
-        };
-    }
 
-    public Car createCar(){
-        Supplier<Car> carSupplier = createCarSupplier();
-        return carSupplier.get();
-    };
 
-    public Response<Car> add(String vin, Car car){
+    public Response<Car> add(){
+        String first = UserInput.getText("Please enter car info: ");
+        String vin = UserInput.getText("Please enter car VIN: ");
+        String carBrand = UserInput.getText("Введите марку авто");
+        String carModel = UserInput.getText("Введите модель авто");
+        int yearOfIssue = UserInput.getInt("Введите год авто");
+        double price = UserInput.getDouble("Введите цену авто");
+        int rating = UserInput.getInt("Введите рейтинг от 1 до 5");
+        Car car = new Car(carBrand,carModel,yearOfIssue,price,rating);
         Car newCar = database.addCar(vin, car);
         return new Response<>(newCar, "Ok");
     };
