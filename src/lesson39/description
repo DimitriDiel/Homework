@@ -1,0 +1,25 @@
+1) составить список классов и методов к которым необходимо написать тесты
+2) если к одному и тому же методу необходимо создать несколько тестов - указать все
+3) написать эти тесты
+
+Список классов и методов.
+
+1. TaskInMemoryRepository
+    add
+    findById
+    findByTaskName
+
+
+2. TaskServiceFind
+    findAll
+    findBy
+    findById
+    findByName
+
+3. TaskServiceAddOrUpdate
+    add
+
+4. ValidationRequest
+    checkRequest
+    checkRequestAdd
+
